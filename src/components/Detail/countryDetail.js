@@ -25,7 +25,7 @@ const CountryDetail = (props) => {
       <div className={styles.lesserDetail}>
         <Country country={country} />
       </div>
-      <h3 className={styles.heading}>Stats: </h3>
+      <h3 className={styles.heading}>Stats Breakdown</h3>
       <ul className={styles.detailContainer}>
         {detailList.map((detail) => (
           <li key={detail.key} className={styles.rowDetails}>
