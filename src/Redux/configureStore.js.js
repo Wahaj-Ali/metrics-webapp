@@ -1,11 +1,10 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
-
-const reducer = combineReducers({
-
-});
+import { configureStore } from '@reduxjs/toolkit';
+import pollutionSlice from './pollution/pollutionSlice';
 
 const store = configureStore({
-  reducer,
+  reducer: {
+    pollutionSlice,
+  },
 });
 
 export default store;
