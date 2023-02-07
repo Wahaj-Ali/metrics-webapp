@@ -22,7 +22,7 @@ function App() {
             )}
             />
             <Route
-              path="/Details"
+              path="/:topLevelDomain"
               element={(
                 <Container fluid className="App">
                   <Details />
