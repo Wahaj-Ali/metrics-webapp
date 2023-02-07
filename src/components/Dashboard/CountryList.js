@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-// import { NavLink } from 'react-bootstrap';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { BsArrowRightCircle } from 'react-icons/bs';
@@ -8,10 +7,10 @@ import Country from './Country';
 import styles from './country.module.css';
 
 const CountryList = () => {
-  const [search, setSearch] = useState('');
-  const searchCountry = (e) => {
-    setSearch(e.target.value.toLowerCase());
-  };
+  // const [search, setSearch] = useState('');
+  // const searchCountry = (e) => {
+  //   setSearch(e.target.value.toLowerCase());
+  // };
   const countryList = useSelector((state) => state.pollutionSlice.countryList);
 
   const dispatch = useDispatch();
@@ -24,7 +23,7 @@ const CountryList = () => {
 
   return (
     <>
-      <input className={styles.searchBar} type="text" value={search} placeholder="Search..." onChange={searchCountry} />
+      <h2 className={styles.statsheading}>Stats by Country Name</h2>
 
       <div className={styles.countryContainer}>
         <ul className={styles.countrylist}>

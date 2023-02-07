@@ -22,5 +22,27 @@
 
 .keys {
   font-weight: 800;
-  padding: 2px;
+  padding: 5px;
+  font-style: italic;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.rowDetails {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding: 5px;
+}
+
+.rowDetails:nth-of-type(odd) {
+  background-color: rgb(189 36 89);
+}
+
+@media (max-width: 768px) {
+  .rowDetails {
+    justify-content: space-between;
+  }
+  
 }

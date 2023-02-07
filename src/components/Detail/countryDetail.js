@@ -28,7 +28,7 @@ const CountryDetail = (props) => {
       <h3 className={styles.heading}>Stats: </h3>
       <ul className={styles.detailContainer}>
         {detailList.map((detail) => (
-          <li key={detail.key} className="row details">
+          <li key={detail.key} className={styles.rowDetails}>
             <span className={styles.keys}>
               {detail.key}
               :
