@@ -1,33 +1,37 @@
 import { Container } from 'react-bootstrap';
+import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Dashboard from './pages/Dashboard';
 import Details from './pages/Details';
+import store from './Redux/configureStore.js';
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Routes>
-          <Route
-            path="/"
-            element={(
-              <Container fluid className="App">
-                <Dashboard />
-                {' '}
-              </Container>
+      <Provider store={store}>
+        <Router>
+          <Routes>
+            <Route
+              path="/"
+              element={(
+                <Container fluid className="App">
+                  <Dashboard />
+                  {' '}
+                </Container>
             )}
-          />
-          <Route
-            path="/Details"
-            element={(
-              <Container fluid className="App">
-                <Details />
-              </Container>
+            />
+            <Route
+              path="/Details"
+              element={(
+                <Container fluid className="App">
+                  <Details />
+                </Container>
             )}
-          />
-        </Routes>
-      </Router>
+            />
+          </Routes>
+        </Router>
+      </Provider>
     </div>
   );
 }
