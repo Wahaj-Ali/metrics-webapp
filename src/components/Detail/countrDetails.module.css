@@ -1,0 +1,26 @@
+.statContainer {
+    height: 100vh;
+}
+
+.lesserDetail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading {
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+}
+
+.detailContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+}
+
+.keys {
+    font-weight: 800;
+    padding: 2px;
+}

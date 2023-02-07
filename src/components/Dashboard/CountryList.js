@@ -34,10 +34,10 @@ const CountryList = () => {
                 <Link to={`/${country.numericCode}`} className={styles.singleCountry}>
                   <BsArrowRightCircle className={styles.direct} />
                 </Link>
-                <Country country={country} />
+                <Country country={country} detailed />
               </li>
             ))
-            : <p className="max-width flex-center">Empty List</p>}
+            : <p className="max-width flex-center">Loading...</p>}
         </ul>
 
       </div>

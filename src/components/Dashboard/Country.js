@@ -4,7 +4,7 @@ import { Col } from 'react-bootstrap';
 import styles from './country.module.css';
 
 const Country = (props) => {
-  const { country } = props;
+  const { country, detailed } = props;
   const { name, population, flags } = country;
   return (
 
@@ -15,7 +15,10 @@ const Country = (props) => {
 
         <div className={styles.descp}>
           <h4>{name}</h4>
-          <p>{population}</p>
+          <p>
+            {detailed && 'Poplution: '}
+            {population}
+          </p>
         </div>
 
       </div>
