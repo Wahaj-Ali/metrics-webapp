@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: center;
   margin: 0;
-    border: 1px solid black;
+  border: 1px solid black;
 }
 
 ul,
@@ -35,7 +35,7 @@ p {
   color: #fff;
 }
 
-.countryContainer{
+.countryContainer {
   display: flex;
 }
 
