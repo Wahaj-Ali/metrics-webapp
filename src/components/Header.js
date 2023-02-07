@@ -8,7 +8,7 @@ import styles from './header.module.css';
 const Header = () => (
   <div className={styles.navbar}>
     <div className={styles.brand}>
-      <h1>Poluution Index</h1>
+      <h1>Population Index</h1>
     </div>
     <Row className={styles.settings}>
       <div className={styles.audio}>

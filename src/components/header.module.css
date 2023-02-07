@@ -23,3 +23,13 @@
   .audio {
     padding-right: 30px;
   }
+
+  @media (max-width: 768px) {
+    .brand {
+      margin-left: 20px;
+    }
+
+    .brand h1 {
+      font-size: 22px;
+    }
+  }

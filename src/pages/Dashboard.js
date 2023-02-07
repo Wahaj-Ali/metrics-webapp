@@ -1,11 +1,11 @@
 import React from 'react';
-import Country from '../components/Country';
+import CountryList from '../components/Dashboard/CountryList';
 import Header from '../components/Header';
 
 const Dashboard = () => (
   <div>
     <Header />
-    <Country />
+    <CountryList />
   </div>
 );
 
