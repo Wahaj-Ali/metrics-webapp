@@ -24,6 +24,10 @@
     padding-right: 30px;
   }
 
+  .iconBack {
+    color: #fff;
+  }
+
   @media (max-width: 768px) {
     .brand {
       margin-left: 20px;
