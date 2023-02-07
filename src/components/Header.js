@@ -1,11 +1,24 @@
 import React from 'react';
-import Navbar from './Navbar';
+import { Row } from 'react-bootstrap';
+import { AiFillAudio } from 'react-icons/ai';
+import { IoMdSettings } from 'react-icons/io';
+import styles from './header.module.css';
+// import Navbar from './Navbar';
 
 const Header = () => (
-  <header className="header">
-    <h1 className="title">What Mobile</h1>
-    <Navbar />
-  </header>
+  <div className={styles.navbar}>
+    <div className={styles.brand}>
+      <h1>Poluution Index</h1>
+    </div>
+    <Row className={styles.settings}>
+      <div className={styles.audio}>
+        <AiFillAudio size={25} />
+      </div>
+      <div>
+        <IoMdSettings size={25} />
+      </div>
+    </Row>
+  </div>
 );
 
 export default Header;

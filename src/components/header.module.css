@@ -1,0 +1,25 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    background: rgb(215, 55, 111);
+    justify-content: space-between;
+    min-height: 4rem;
+    padding: 0.5rem;
+    color: white;
+  }
+  
+  .brand {
+    margin-left: 40px;
+  }
+
+  .settings {
+    float: right;
+    align-items: center;
+    display: flex;
+    padding-right: 30px;
+    height: 100%;
+  }
+  
+  .audio {
+    padding-right: 30px;
+  }

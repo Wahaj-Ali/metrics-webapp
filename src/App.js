@@ -1,17 +1,31 @@
+import { Container } from 'react-bootstrap';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Header from './components/Header';
-import MobileDashboard from './pages/MobileDashboard';
-import MobileSpecs from './pages/MobileSpecs';
+import Dashboard from './pages/Dashboard';
+import Details from './pages/Details';
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
         <Routes>
-          <Route path="/" element={<MobileDashboard />} />
-          <Route path="/MobileDetails" element={<MobileSpecs />} />
+          <Route
+            path="/"
+            element={(
+              <Container fluid className="App">
+                <Dashboard />
+                {' '}
+              </Container>
+            )}
+          />
+          <Route
+            path="/Details"
+            element={(
+              <Container fluid className="App">
+                <Details />
+              </Container>
+            )}
+          />
         </Routes>
       </Router>
     </div>
