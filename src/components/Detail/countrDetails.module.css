@@ -28,7 +28,7 @@
 
 .rowDetails {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   padding: 5px;
 }
@@ -41,5 +41,4 @@
   .rowDetails {
     justify-content: space-between;
   }
-  
 }
