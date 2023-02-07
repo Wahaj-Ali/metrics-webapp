@@ -20,7 +20,7 @@ const CountryList = () => {
     if (!countryList) {
       dispatch(fetchApi());
     }
-  }, [dispatch], countryList);
+  }, [dispatch, countryList]);
 
   return (
     <>
