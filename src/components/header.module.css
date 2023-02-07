@@ -26,6 +26,7 @@
 
 .iconBack {
   color: #fff;
+  font-size: x-large;
 }
 
 @media (max-width: 768px) {
