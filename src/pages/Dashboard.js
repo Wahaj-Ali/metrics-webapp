@@ -4,7 +4,7 @@ import Header from '../components/Header';
 
 const Dashboard = () => (
   <div>
-    <Header />
+    <Header name="Population Index" returnPage={false} />
     <CountryList />
   </div>
 );
