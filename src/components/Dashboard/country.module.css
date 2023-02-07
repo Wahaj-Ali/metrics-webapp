@@ -1,0 +1,82 @@
+.card {
+  /* margin: 5px 0 0 20px; */
+  background: rgb(215, 55, 111);
+  padding: 10px;
+  width: 300px;
+  height: 215px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+    border: 1px solid black;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.direct {
+  display: flex;
+  color: white;
+  font-size: x-large;
+  position: relative;
+  top: 41px;
+  left: 290px;
+}
+
+.descp {
+  margin: 10px;
+  padding: 5px;
+}
+
+.descp h4,
+p {
+  color: #fff;
+}
+
+.countryContainer{
+  display: flex;
+}
+
+.countrylist {
+  color: white;
+  font-size: 17px;
+  display: flex;
+  flex-flow: wrap;
+  margin: 40px;
+}
+
+.flag {
+  width: 100px;
+}
+
+.singleCountry {
+  display: flex;
+  position: absolute;
+}
+
+@media (max-width: 768px) {
+  .countrylist {
+    display: grid;
+    grid-template-columns: 0.5fr 0.75fr;
+    margin: 6px;
+  }
+
+  .card {
+    width: 160px;
+    margin: 0;
+    border: 1px solid black;
+  }
+
+  .direct {
+    display: flex;
+    position: relative;
+    top: 10px;
+    left: 150px;
+  }
+
+  .searchBar {
+    margin: 10px;
+  }
+}
