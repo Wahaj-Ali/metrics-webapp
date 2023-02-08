@@ -18,10 +18,11 @@ ul,
 li {
   list-style: none;
   color: white;
+
   /* margin: -15px 0; */
 }
 
-.list{
+.list {
   margin: -15px 0;
 }
 
@@ -69,10 +70,10 @@ p {
 }
 
 @media (max-width: 768px) {
-
   .countryContainer {
     display: inline-flex;
   }
+
   .countrylist {
     display: grid;
     grid-template-columns: 0.5fr 0.75fr;
