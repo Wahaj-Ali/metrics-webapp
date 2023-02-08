@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 .lesserDetail {
   display: flex;
   justify-content: center;
@@ -24,6 +26,10 @@
   text-transform: capitalize;
   display: flex;
   justify-content: flex-start;
+}
+
+.values {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .rowDetails {

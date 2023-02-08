@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 .card {
   margin: 10px;
   background: rgb(215, 55, 111);
@@ -18,12 +20,10 @@ ul,
 li {
   list-style: none;
   color: white;
-
-  /* margin: -15px 0; */
 }
 
 .list {
-  margin: -15px 0;
+  margin: -5px 0;
 }
 
 .descp {
@@ -34,6 +34,10 @@ li {
 .descp h4,
 p {
   color: #fff;
+}
+
+.descp p {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .countryContainer {
@@ -52,13 +56,17 @@ p {
   width: 100px;
 }
 
-.singleCountry {
-  color: white;
+.direct {
   font-size: x-large;
   position: relative;
   top: 45px;
   left: 135px;
   width: 22px;
+}
+
+.singleCountry {
+  color: white;
+  text-decoration: none;
 }
 
 .statsheading {
@@ -85,7 +93,7 @@ p {
     margin: 3px;
   }
 
-  .singleCountry {
+  .direct {
     top: 38px;
     left: 65px;
   }
@@ -97,5 +105,9 @@ p {
   .statsheading {
     margin: 8px;
     font-size: 16px;
+  }
+
+  .descp p {
+    font-size: 11px;
   }
 }

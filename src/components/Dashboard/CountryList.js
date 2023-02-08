@@ -32,8 +32,9 @@ const CountryList = () => {
               <li key={country.numericCode} className={styles.list}>
                 <Link to={`/${country.numericCode}`} className={styles.singleCountry}>
                   <BsArrowRightCircle className={styles.direct} />
+                  <Country country={country} detailed />
                 </Link>
-                <Country country={country} detailed />
+
               </li>
             ))
             : <p className="max-width flex-center">Loading...</p>}
