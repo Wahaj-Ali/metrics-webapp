@@ -29,7 +29,7 @@ const CountryList = () => {
         <ul className={styles.countrylist}>
           {countryList
             ? countryList.map((country) => (
-              <li key={country.numericCode}>
+              <li key={country.numericCode} className={styles.list}>
                 <Link to={`/${country.numericCode}`} className={styles.singleCountry}>
                   <BsArrowRightCircle className={styles.direct} />
                 </Link>
