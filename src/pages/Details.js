@@ -7,7 +7,7 @@ import Header from '../components/Header';
 const Details = () => {
   const { topLevelDomain } = useParams();
   const countryList = useSelector((state) => state.pollutionSlice.countryList);
-  let name = topLevelDomain;
+  let name;
   let detailedContent = '';
   if (countryList) {
     const country = countryList.filter((country) => (

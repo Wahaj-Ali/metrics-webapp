@@ -9,7 +9,7 @@ import styles from './header.module.css';
 const Header = (props) => {
   const { name, returnPage } = props;
   return (
-    <div className={styles.navbar}>
+    <div className={styles.navbar} data-testid="header">
       {returnPage && (
       <Link to="/">
         <IoIosArrowBack className={styles.iconBack} />
