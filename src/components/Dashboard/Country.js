@@ -9,7 +9,7 @@ const Country = (props) => {
   return (
 
     <Col className={styles.card}>
-      <div className="flex-center column country">
+      <div className={styles.descpDiv}>
 
         <img className={styles.flag} src={flags.svg} alt={`${name}Country Images`} />
 

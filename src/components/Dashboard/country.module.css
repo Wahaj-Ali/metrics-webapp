@@ -23,12 +23,17 @@ li {
 }
 
 .list {
-  margin: -5px 0;
+  margin: -15px 0;
 }
 
 .descp {
   margin: 10px;
   padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  left: 20px;
 }
 
 .descp h4,
@@ -38,6 +43,11 @@ p {
 
 .descp p {
   font-family: 'Montserrat', sans-serif;
+}
+
+.descpDiv {
+  display: flex;
+  flex-direction: column;
 }
 
 .countryContainer {
@@ -53,7 +63,10 @@ p {
 }
 
 .flag {
-  width: 100px;
+  width: 150px;
+  align-self: flex-start;
+  display: flex;
+  border-radius: 10px;
 }
 
 .direct {
@@ -109,5 +122,9 @@ p {
 
   .descp p {
     font-size: 11px;
+  }
+
+  .flag {
+    width: 100px;
   }
 }
