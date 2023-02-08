@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { BsArrowRightCircle } from 'react-icons/bs';
 import Country from '../Dashboard/Country';
 import styles from './countrDetails.module.css';
 
@@ -9,11 +10,11 @@ const CountryDetail = (props) => {
   const detailList = [];
   Object.keys(country).forEach((key) => {
     if ((typeof country[key] === 'string'
-          || typeof country[key] === 'number')
-          && (key !== 'alpha2Code'
-            && key !== 'alpha3Code'
-            && key !== 'flag'
-          )) {
+      || typeof country[key] === 'number')
+      && (key !== 'alpha2Code'
+        && key !== 'alpha3Code'
+        && key !== 'flag'
+      )) {
       return (
         detailList.push({ key, value: country[key] })
       );
@@ -33,7 +34,10 @@ const CountryDetail = (props) => {
               {detail.key}
               :
             </span>
-            <span className={styles.values}>{detail.value}</span>
+            <span className={styles.values}>
+              {detail.value}
+              <BsArrowRightCircle className={styles.direct} />
+            </span>
           </li>
         ))}
       </ul>

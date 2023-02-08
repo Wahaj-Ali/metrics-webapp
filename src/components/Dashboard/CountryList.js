@@ -7,10 +7,6 @@ import Country from './Country';
 import styles from './country.module.css';
 
 const CountryList = () => {
-  // const [search, setSearch] = useState('');
-  // const searchCountry = (e) => {
-  //   setSearch(e.target.value.toLowerCase());
-  // };
   const countryList = useSelector((state) => state.pollutionSlice.countryList);
 
   const dispatch = useDispatch();
@@ -34,12 +30,10 @@ const CountryList = () => {
                   <BsArrowRightCircle className={styles.direct} />
                   <Country country={country} detailed />
                 </Link>
-
               </li>
             ))
             : <p className="max-width flex-center">Loading...</p>}
         </ul>
-
       </div>
     </>
   );

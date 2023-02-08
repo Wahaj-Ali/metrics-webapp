@@ -30,6 +30,8 @@
 
 .values {
   font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
 }
 
 .rowDetails {
@@ -43,8 +45,23 @@
   background-color: rgb(189 36 89);
 }
 
+.direct {
+  display: flex;
+  position: absolute;
+  right: 10px;
+}
+
 @media (max-width: 768px) {
   .rowDetails {
     justify-content: space-between;
+  }
+
+  .values {
+    gap: 20px;
+  }
+
+  .direct {
+    position: relative;
+    right: 0;
   }
 }
