@@ -7,25 +7,21 @@ import Country from './Country';
 import styles from './country.module.css';
 
 const CountryList = () => {
-  const state = useSelector((state) => state.pollutionSlice.countryList);
+  const countryList = useSelector((state) => state.pollutionSlice.countryList);
 
   const dispatch = useDispatch();
 
   const [search, setSearch] = useState('');
 
   const handleChange = (e) => {
-    setSearch(e.target.value);
+    setSearch(e.target.value.toLowerCase());
   };
 
   useEffect(() => {
-    if (!state) {
+    if (!countryList) {
       dispatch(fetchApi());
     }
-  }, [dispatch, state]);
-
-  const countryList = state.filter(
-    (item) => item.name.toLowerCase().includes(search.toLowerCase()),
-  );
+  }, [dispatch, countryList]);
 
   return (
     <>
@@ -41,16 +37,22 @@ const CountryList = () => {
       />
       <div className={styles.countryContainer}>
         <ul className={styles.countrylist}>
-          {countryList
-            ? countryList.map((country) => (
-              <li key={country.numericCode} className={styles.list}>
-                <Link to={`/${country.numericCode}`} className={styles.singleCountry}>
-                  <BsArrowRightCircle className={styles.direct} />
-                  <Country country={country} detailed />
-                </Link>
-              </li>
-            ))
-            : <p className="max-width flex-center">Loading...</p>}
+          {
+            countryList
+              ? countryList.filter((filtered) => {
+                if (search === '') {
+                  return filtered;
+                }
+                return filtered.name.toLowerCase().includes(search);
+              }).map((country) => (
+                <li key={country.numericCode} className={styles.list}>
+                  <Link to={`/${country.numericCode}`} className={styles.singleCountry}>
+                    <BsArrowRightCircle className={styles.direct} />
+                    <Country country={country} detailed />
+                  </Link>
+                </li>
+              )) : <p className="max-width flex-center">Loading...</p>
+          }
         </ul>
       </div>
     </>
