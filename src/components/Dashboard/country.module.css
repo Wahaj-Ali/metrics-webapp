@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 .card {
   margin: 10px;
   background: rgb(215, 55, 111);
@@ -7,7 +9,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
+  box-shadow: 0 0 11px 8px #6c262c;
+}
+
+.list:nth-child(even) .card {
+  background-color: rgb(161 35 79);
 }
 
 ul,
@@ -16,23 +22,32 @@ li {
   color: white;
 }
 
-.direct {
-  display: flex;
-  color: white;
-  font-size: x-large;
-  position: relative;
-  top: 41px;
-  left: 290px;
+.list {
+  margin: -15px 0;
 }
 
 .descp {
   margin: 10px;
   padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  left: 20px;
 }
 
 .descp h4,
 p {
   color: #fff;
+}
+
+.descp p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.descpDiv {
+  display: flex;
+  flex-direction: column;
 }
 
 .countryContainer {
@@ -44,44 +59,57 @@ p {
   font-size: 17px;
   display: flex;
   flex-flow: wrap;
-  margin: 40px;
+  margin: 5px 40px;
+  justify-content: center;
 }
 
 .flag {
-  width: 100px;
+  width: 150px;
+  align-self: flex-start;
+  display: flex;
+  border-radius: 10px;
+}
+
+.direct {
+  font-size: x-large;
+  position: relative;
+  top: 45px;
+  left: 135px;
+  width: 22px;
 }
 
 .singleCountry {
-  display: flex;
-  position: absolute;
+  color: white;
+  text-decoration: none;
 }
 
 .statsheading {
   display: flex;
-  margin-left: 35px;
+  margin: 5px 50px;
   color: #fff;
   text-transform: uppercase;
   font-size: 17px;
 }
 
 @media (max-width: 768px) {
+  .countryContainer {
+    display: inline-flex;
+  }
+
   .countrylist {
     display: grid;
     grid-template-columns: 0.5fr 0.75fr;
-    margin: 6px;
+    margin: 1px;
   }
 
   .card {
     width: 150px;
-    margin: 0;
-    border: 1px solid black;
+    margin: 3px;
   }
 
   .direct {
-    display: flex;
-    position: relative;
-    top: 10px;
-    left: 140px;
+    top: 38px;
+    left: 65px;
   }
 
   .searchBar {
@@ -89,7 +117,15 @@ p {
   }
 
   .statsheading {
-    margin-left: 8px;
+    margin: 8px;
     font-size: 16px;
+  }
+
+  .descp p {
+    font-size: 11px;
+  }
+
+  .flag {
+    width: 100px;
   }
 }

@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 .lesserDetail {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 15px;
 }
 
 .heading {
@@ -20,10 +23,15 @@
 .keys {
   font-weight: 800;
   padding: 5px;
-  font-style: italic;
   text-transform: capitalize;
   display: flex;
   justify-content: flex-start;
+}
+
+.values {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
 }
 
 .rowDetails {
@@ -37,8 +45,23 @@
   background-color: rgb(189 36 89);
 }
 
+.direct {
+  display: flex;
+  position: absolute;
+  right: 10px;
+}
+
 @media (max-width: 768px) {
   .rowDetails {
     justify-content: space-between;
+  }
+
+  .values {
+    gap: 20px;
+  }
+
+  .direct {
+    position: relative;
+    right: 0;
   }
 }
