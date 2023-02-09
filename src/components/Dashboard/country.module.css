@@ -60,6 +60,7 @@ p {
   display: flex;
   flex-flow: wrap;
   margin: 5px 40px;
+  justify-content: center;
 }
 
 .flag {
