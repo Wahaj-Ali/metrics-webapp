@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { BsArrowRightCircle } from 'react-icons/bs';
@@ -7,20 +7,38 @@ import Country from './Country';
 import styles from './country.module.css';
 
 const CountryList = () => {
-  const countryList = useSelector((state) => state.pollutionSlice.countryList);
+  const state = useSelector((state) => state.pollutionSlice.countryList);
 
   const dispatch = useDispatch();
 
+  const [search, setSearch] = useState('');
+
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+  };
+
   useEffect(() => {
-    if (!countryList) {
+    if (!state) {
       dispatch(fetchApi());
     }
-  }, [dispatch, countryList]);
+  }, [dispatch, state]);
+
+  const countryList = state.filter(
+    (item) => item.name.toLowerCase().includes(search.toLowerCase()),
+  );
 
   return (
     <>
       <h2 className={styles.statsheading}>Stats by Country Name</h2>
 
+      <input
+        className="search-input"
+        type="text"
+        value={search}
+        aria-label="search"
+        onChange={handleChange}
+        placeholder="Search a country..."
+      />
       <div className={styles.countryContainer}>
         <ul className={styles.countrylist}>
           {countryList
