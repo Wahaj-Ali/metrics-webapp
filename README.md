@@ -36,7 +36,7 @@
 
 >This "Metrics webapp" is a React SPA that shows the countries of the world along with their population count. Each country's details can be explored if users click the country. It uses [API](https://restcountries.com/v3.1/all) to fetch the data about each country and the main-page.
 
-**Population Index-Metrics webapp*
+**Population Index-Metrics webapp**
 
 ## 🛠 Built With <a name="built-with"></a>
 
