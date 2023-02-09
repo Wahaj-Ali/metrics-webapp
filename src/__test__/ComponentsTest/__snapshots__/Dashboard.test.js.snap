@@ -66,6 +66,14 @@ Array [
     >
       Stats by Country Name
     </h2>
+    <input
+      aria-label="search"
+      className="search-input"
+      onChange={[Function]}
+      placeholder="Search a country..."
+      type="text"
+      value=""
+    />
     <div
       className="countryContainer"
     >

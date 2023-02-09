@@ -10,6 +10,13 @@ Object {
       >
         Stats by Country Name
       </h2>
+      <input
+        aria-label="search"
+        class="search-input"
+        placeholder="Search a country..."
+        type="text"
+        value=""
+      />
       <div
         class="countryContainer"
       >
@@ -31,6 +38,13 @@ Object {
     >
       Stats by Country Name
     </h2>
+    <input
+      aria-label="search"
+      class="search-input"
+      placeholder="Search a country..."
+      type="text"
+      value=""
+    />
     <div
       class="countryContainer"
     >
