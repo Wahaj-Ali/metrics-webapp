@@ -71,9 +71,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Full website(SPA)**
+- **Webapp(SPA)**
 - **Use REST [API](https://restcountries.com/v3.1/all)**
-- **Responsive webapp**
+- **Responsive**
 
 
 
