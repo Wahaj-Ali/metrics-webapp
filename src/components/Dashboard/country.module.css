@@ -50,8 +50,13 @@ p {
   flex-direction: column;
 }
 
-.countryContainer {
+.countryContainer .pagination {
   display: flex;
+  position: fixed;
+  top: 95%;
+  align-items: center;
+  justify-content: center;
+  left: 44%;
 }
 
 .countrylist {
@@ -91,6 +96,17 @@ p {
   font-size: 17px;
 }
 
+.pagination a {
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.pagination .active {
+  color: #8aad0afa;
+}
+
 @media (max-width: 768px) {
   .countryContainer {
     display: inline-flex;
@@ -100,6 +116,11 @@ p {
     display: grid;
     grid-template-columns: 0.5fr 0.75fr;
     margin: 1px;
+  }
+
+  .countryContainer .pagination {
+    left: 25%;
+    font-size: 0.8rem;
   }
 
   .card {
