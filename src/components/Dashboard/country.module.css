@@ -55,9 +55,8 @@ p {
   position: fixed;
   top: 95%;
   align-items: center;
-  width: 100vw;
   justify-content: center;
-  gap: 10px;
+  left: 44%;
 }
 
 .countrylist {
@@ -117,6 +116,11 @@ p {
     display: grid;
     grid-template-columns: 0.5fr 0.75fr;
     margin: 1px;
+  }
+
+  .countryContainer .pagination {
+    left: 25%;
+    font-size: 0.8rem;
   }
 
   .card {
