@@ -50,8 +50,14 @@ p {
   flex-direction: column;
 }
 
-.countryContainer {
+.countryContainer .pagination {
   display: flex;
+  position: fixed;
+  top: 95%;
+  align-items: center;
+  width: 100vw;
+  justify-content: center;
+  gap: 10px;
 }
 
 .countrylist {
@@ -89,6 +95,17 @@ p {
   color: #fff;
   text-transform: uppercase;
   font-size: 17px;
+}
+
+.pagination a {
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.pagination .active {
+  color: #8aad0afa;
 }
 
 @media (max-width: 768px) {
