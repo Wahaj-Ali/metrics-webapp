@@ -15,7 +15,9 @@ const CountryList = () => {
   const [search, setSearch] = useState('');
 
   const [currentPage, setCurrentPage] = useState(0);
-  const itemsPerPage = 8;
+
+  const isMobile = window.innerWidth <= 768;
+  const itemsPerPage = isMobile ? 4 : 8;
 
   const handleChange = (e) => {
     setSearch(e.target.value.toLowerCase());
@@ -62,6 +64,7 @@ const CountryList = () => {
         placeholder="Search a country..."
       />
       <div className={styles.countryContainer}>
+
         <ul className={styles.countrylist}>
           {displayedItems.length > 0 ? (
             displayedItems.map((country) => (
@@ -79,13 +82,12 @@ const CountryList = () => {
         {/* Pagination component */}
         {countryList && (
           <ReactPaginate
-            previousLabel="Previous"
-            nextLabel="Next"
-            breakLabel="..."
-            breakClassName="break-me"
+            previousLabel="<"
+            nextLabel=">"
+            breakLabel=""
             pageCount={pageCount}
-            marginPagesDisplayed={2}
-            pageRangeDisplayed={5}
+            pageRangeDisplayed={3}
+            marginPagesDisplayed={0}
             onPageChange={handlePageChange}
             className={styles.pagination}
             pageClassName={styles.pageItem}
