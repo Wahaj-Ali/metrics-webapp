@@ -34,6 +34,7 @@
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 Population Index-Metrics webapp <a name="about-project"></a>
+![Metrics Mockup screen](https://github.com/Wahaj-Ali/metrics-webapp/assets/111431787/cd2309cf-f1cb-4844-9c0a-13bc330e32ef)
 
 >The Metrics web app is a powerful React-based SPA that allows you to explore detailed population metrics for countries all around the world! With our intuitive interface and powerful data visualization tools, you'll be able to quickly and easily access the latest population data for every country on the planet.
 
